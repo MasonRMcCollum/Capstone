@@ -2,7 +2,7 @@ import html from "html-literal";
 import { Links } from "../store";
 
 export default Links => html`
-  <nav>
+  <nav class="navigation">
     <i class="fas fa-bars"></i>
     <ul class="hidden--mobile nav-links">
       ${Links.map(
