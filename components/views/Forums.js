@@ -11,7 +11,7 @@ export default () => html`
           <option value="">Question</option>
           <option value="">Discussion</option>
           <option value="">Rant</option>
-          <input type= />
+          <input type= "text"/>
           <input type="button" value="post" />
             <br />
           </div>

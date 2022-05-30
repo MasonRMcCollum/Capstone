@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default () => html`
-  <div>
+  <div class="$1">
     <input type="button" value="Sign in/Sign out" />
   </div>
 `;
