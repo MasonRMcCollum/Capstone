@@ -3,8 +3,8 @@ const Board = require("../models/Board");
 const router = Router();
 
 router.post("/", (request, response) => {
-  const newPizza = new Board(request.body);
-  newPizza.save((error, record) => {
+  const newBoard = new Board(request.body);
+  newBoard.save((error, record) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(record);
   });
