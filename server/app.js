@@ -2,7 +2,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const pizzas = require("./routers/pizzas");
+const board = require("./routers/board");
 // Initialize the Express application
 const app = express();
 
@@ -23,7 +23,7 @@ const logging = (request, response, next) => {
 };
 app.use(express.json());
 app.use(logging);
-app.use("/pizzas", pizzas);
+app.use("/board", board);
 
 // Handle the request with HTTP GET method from http://localhost:4040/status
 app.get("/status", (request, response) => {
