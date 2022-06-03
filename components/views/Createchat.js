@@ -5,11 +5,15 @@ export default () => html`
     <form id="create" method="POST" action="">
       <div>
         <label for="Type"></label>
-        <select id="Forum" name="come back to later">
+        <select id="Create chat">
           <option value="">Public</option>
           <option value="">Private</option>
           <input type= "text" value="chat"/>
-          <input type="button" value="Create" />
+          <input
+      type="button"
+      onclick="window.location.href='Chat';"
+      value="CREATE!"
+    />
             <br />
           </div>
         </select>

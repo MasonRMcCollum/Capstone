@@ -1,8 +1,27 @@
 body {
-  background-color: white;
+  background-color: #DBE9F3;
 }
-nav{
+
+
+nav {
   display: flex;
-  justify-content: space-evenly;
-  padding: auto;
+  align-items: center;
+  flex-direction: row;
+}
+
+nav > i {
+  padding: 1rem;
+  font-size: 2em;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0;
+}
+
+nav > ul > li {
+  padding: 0.5rem;
+  list-style-type: none;
 }

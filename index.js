@@ -55,11 +55,11 @@ router.hooks({
           console.log(err);
           done();
         });
-    } else if (view === "Pizza") {
+    } else if (view === "Chat") {
       axios
-        .get(`${process.env.PIZZA_PLACE_API_URL}`)
+        .get(`${process.env._API_URL}`)
         .then(response => {
-          store.Pizza.pizzas = response.data;
+          store.Chat.Room_id = response.data;
           done();
         })
         .catch(error => {
