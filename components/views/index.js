@@ -5,3 +5,4 @@ export { default as Forums } from "./Forums";
 export { default as Profile } from "./Profile";
 export { default as Joinchat } from "./Joinchat";
 export { default as Createchat } from "./Createchat";
+export { default as Chat } from "./Chat";
