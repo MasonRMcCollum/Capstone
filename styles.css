@@ -25,3 +25,9 @@ nav > ul > li {
   padding: 0.5rem;
   list-style-type: none;
 }
+Header {
+  background-color: #4986B2;
+}
+Footer {
+  background-color: #4986B2;
+}
