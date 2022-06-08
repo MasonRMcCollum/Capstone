@@ -1,4 +1,5 @@
 export default {
   header: "create chat",
-  view: "Createchat"
+  view: "Createchat",
+  room: []
 };
