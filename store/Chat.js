@@ -1,5 +1,7 @@
 export default {
   header: "",
   view: "Chat",
-  room_id: []
+  room_id: [],
+  messages: [],
+  username: ""
 };

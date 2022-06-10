@@ -5,18 +5,19 @@ export default () => html`
     <form id="create" method="POST" action="">
       <div>
         <label for="Type"></label>
-        <select id="Create chat">
+        <select id="Createchat">
           <option value="">Public</option>
           <option value="">Private</option>
-          <input type= "text" value="chat"/>
+          </select>
+          <input id="roomname" type= "text" value="chat"/>
+          <input id="username" type= "text" value=""/>
           <input
-      type="button"
-      onclick="window.location.href='Chat';"
+      type="submit"
       value="CREATE!"
     />
+
             <br />
           </div>
-        </select>
       </div>
     </form>
   </section>

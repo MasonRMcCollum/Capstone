@@ -16,14 +16,40 @@ function render(state = store.Home) {
   ${Footer()}
 `;
   router.updatePageLinks();
-  afterRender();
+  afterRender(state);
 }
 
-function afterRender() {
+function afterRender(state) {
   // add menu toggle to bars icon in nav bar
   document.querySelector(".navigation").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
+  if (state.view === "Createchat") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+      console.log("createchatSchmiter");
+      const inputList = event.target.elements;
+      store.Chat.room_id = inputList.roomname.value;
+      store.Chat.username = inputList.username.value;
+      router.navigate("/Chat");
+    });
+  }
+  if (state.view === "Chat") {
+    console.log(store.Chat.messages);
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+      console.log("createchatSchmiter");
+      const inputList = event.target.elements;
+      const message = {
+        room_id: store.Chat.room_id,
+        username: store.Chat.username,
+        message: inputList.message.value
+      };
+      store.Chat.messages.push(message);
+      console.log(store.Chat.messages);
+      router.navigate("/Chat");
+    });
+  }
 }
 
 router.hooks({
