@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const messageSchema = new mongoose.Schema({
+const forumpostSchema = new mongoose.Schema({
   customer: {
     type: String,
     required: true,
@@ -23,5 +23,5 @@ const messageSchema = new mongoose.Schema({
   toppings: [String]
 });
 
-const Message = mongoose.model("Board", messageSchema);
-module.exports = Message;
+const Forumpost = mongoose.model("Forumpost", forumpostSchema);
+module.exports = Forumpost;

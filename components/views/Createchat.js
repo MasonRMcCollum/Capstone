@@ -9,8 +9,10 @@ export default () => html`
           <option value="">Public</option>
           <option value="">Private</option>
           </select>
-          <input id="roomname" type= "text" value="chat"/>
-          <input id="username" type= "text" value=""/>
+          <input id="roomname" type= "text" value="chat"
+          required/>
+          <input id="username" type= "text" value=""
+          required/>
           <input
       type="submit"
       value="CREATE!"
