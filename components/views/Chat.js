@@ -23,7 +23,7 @@
 import html from "html-literal";
 
 export default state => html`
-  <p>You are chatting with ${state.user} in room ${state.room_id}</p>
+  <p>You are chatting with ${state.username} in room ${state.room_id}</p>
   <h1>${state.user}</h1>
   <section>
     <form id="Chatinput" method="POST" action="">
@@ -32,6 +32,6 @@ export default state => html`
     </form>
   </section>
   <section>
-    <code>${JSON.stringify(state.messages)}</code>
+    <textarea>${JSON.stringify(state.messages)}</textarea>
   </section>
 `;

@@ -1,4 +1,5 @@
 export default {
   header: "Forums list",
-  view: "Forums"
+  view: "Forums",
+  posts: []
 };
