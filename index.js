@@ -3,7 +3,6 @@ import * as store from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
-import { post } from "./server/router/board";
 // import dotenv from "dotenv";
 // dotenv.config();
 
@@ -51,19 +50,6 @@ function afterRender(state) {
       router.navigate("/Chat");
     });
   }
-  // if (state.view === "Forums") {
-  //   console.log(store.Forums.posts);
-  //   document.querySelector("form").addEventListener("submit", event => {
-  //     event.preventDefault();
-  //     console.log("forumpostSchmiter");
-  //     const inputList = event.target.elements;
-  //     const posts = {
-  //       posts: store.Forums.posts
-  //     };
-  //     store.Forums.posts.push(posts);
-  //     router.navigate("/Forums");
-  //   });
-  // }
 }
 
 router.hooks({
