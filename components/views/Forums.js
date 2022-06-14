@@ -6,13 +6,13 @@ export default () => html`
       <h2>Post your Forum</h2>
       <div>
         <label for="Type"></label>
-        <select id="Forum" name="come back to later">
+        <form id="Forum" name="come back to later">
           <option value="">Type of Post</option>
           <option value="">Question</option>
           <option value="">Discussion</option>
           <option value="">Rant</option>
           <input type= "text"/>
-          <input type="button" value="post" />
+          <input type="submit" value="post" />
             <br />
           </div>
         </select>
