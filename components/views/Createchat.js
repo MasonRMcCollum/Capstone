@@ -5,9 +5,10 @@ export default () => html`
     <form id="create" method="POST" action="">
       <div>
         <label for="Type"></label>
-
-          <input id="subject" type="text" value="chat" required/>
-
+        <select id="Createchat">
+          <option value="">Public</option>
+          <option value="">Private</option>
+          </select>
           <input id="roomname" type= "text" value="chat"
           required/>
           <input id="username" type= "text" value=""
