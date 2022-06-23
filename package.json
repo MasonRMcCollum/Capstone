@@ -6,9 +6,8 @@
     "parcel-build": "parcel build index.html && cp _redirects ./dist/",
     "serve": "parcel index.html",
     "app:watch": "nodemon --watch ./server -e js ./server/app.js",
-    "start": "node ./server/app.js",
     "start": "nodemon server/index.js",
-	  "start:server": "node server/index.js"
+    "start:server": "node server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +35,7 @@
     "mongoose": "^6.3.6",
     "navigo": "^8.11.1",
     "parcel": "^2.5.0",
+    "react": "^18.2.0",
     "socket.io": "^4.5.1",
     "yargs-parser": ">=13.1.2"
   }

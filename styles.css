@@ -17,7 +17,7 @@ nav > i {
 nav > ul {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   padding: 0 0;
 }
 
@@ -31,3 +31,67 @@ Header {
 Footer {
   background-color: #4986B2;
 }
+
+textarea > .container {
+  border: 2px solid #546866;
+  background-color: #546866;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+@media (max-width: 549px){
+  .hidden--mobile {
+    display: none !important;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  nav > i {
+    padding: 1rem;
+    font-size: 2em;
+  }
+
+  nav > ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0;
+  }
+
+  nav > ul > li {
+    padding: 0.5rem;
+    list-style-type: none;
+  }
+
+  #bio img {
+    float: left;
+    width: 40%;
+    height: auto;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 0.5rem 0.5rem;
+    border-radius: 25px;
+  }
+
+  nav > .fa-bars {
+    display: none;
+  }

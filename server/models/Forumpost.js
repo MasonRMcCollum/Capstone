@@ -1,15 +1,14 @@
 const mongoose = require("mongoose");
 
 const forumpostSchema = new mongoose.Schema({
-  customer: {
+  Typeofpost: {
     type: String,
     required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
-  crust: {
+  content: {
     type: String,
-    required: true,
-    enum: []
+    validate: /^[A-Za-z0-9 ]*$/
   },
   cheese: {
     type: String,
