@@ -22,8 +22,14 @@ nav > ul {
 }
 
 nav > ul > li {
+  justify-content: space-evenly;
   padding: 0.5rem;
   list-style-type: none;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 0.5rem 0.5rem;
+  border-radius: 25px;
 }
 Header {
   background-color: #4986B2;
@@ -41,15 +47,11 @@ textarea > .container {
   align-items: center;
 }
 
-@media (max-width: 549px){
-  .hidden--mobile {
-    display: none !important;
-  }
-
+@media (max-width: 480px){
   nav {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   nav > i {
@@ -60,38 +62,34 @@ textarea > .container {
   nav > ul {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0 0;
   }
 
   nav > ul > li {
+    justify-content: space-evenly;
     padding: 0.5rem;
     list-style-type: none;
-  }
-
-  #bio img {
-    float: left;
-    width: 40%;
-    height: auto;
-    margin-right: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 0;
-  }
-
-  nav > ul > li {
     display: inline-block;
     text-decoration: none;
     border: 1px solid;
     padding: 0.5rem 0.5rem;
     border-radius: 25px;
   }
-
-  nav > .fa-bars {
-    display: none;
+  Header {
+    background-color: #4986B2;
   }
+  Footer {
+    background-color: #4986B2;
+  }
+
+  textarea > .container {
+    border: 2px solid #546866;
+    background-color: #546866;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    align-items: center;
+  }
+
+
