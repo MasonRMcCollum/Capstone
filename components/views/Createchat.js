@@ -6,18 +6,17 @@ export default () => html`
       <div>
         <label for="Type"></label>
         <select id="Createchat">
-          <option value="">Public</option>
-          <option value="">Private</option>
-          </select>
-          <input id="roomname" type= "text" value="chat"
+          <input id="subject" type= "text" placeholder = "subject of chat"
           required/>
-          <input id="username" type= "text" value=""
+          </select>
+          <input id="roomname" type= "text" placeholder="chat"
+          required/>
+          <input id="username" type= "text" placeholder="username"
           required/>
           <input
       type="submit"
       value="CREATE!"
     />
-
             <br />
           </div>
       </div>

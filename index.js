@@ -31,6 +31,7 @@ function afterRender(state) {
       const inputList = event.target.elements;
       store.Chat.room_id = inputList.roomname.value;
       store.Chat.username = inputList.username.value;
+      store.Chat.subject = inputList.subject.value;
       router.navigate("/Chat");
     });
   }
@@ -48,6 +49,19 @@ function afterRender(state) {
       store.Chat.messages.push(message);
       console.log(store.Chat.messages);
       router.navigate("/Chat");
+    });
+  }
+  if (state.view === "Forums") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+      console.log("forumpostSchmiter");
+      const inputList = event.target.elements;
+      const posts = {
+        posts: store.Forums.posts,
+        post: inputList.post.value
+      };
+      store.Forums.posts.push(posts);
+      router.navigate("/Forums");
     });
   }
 }

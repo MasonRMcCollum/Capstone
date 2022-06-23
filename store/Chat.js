@@ -3,5 +3,6 @@ export default {
   view: "Chat",
   room_id: [],
   messages: [],
-  username: ""
+  username: "",
+  subject: ""
 };
