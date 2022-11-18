@@ -1,0 +1,42 @@
+import json
+import pandas as pd 
+import requests
+
+#api_url = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relativehumidity_2m,windspeed_10'
+api_url = 'https://api.open-meteo.com/v1/forecast?latitude=38.6270&longitude=90.1994&hourly=temperature_2m,relativehumidity_2m,windspeed_10'
+response = requests.get(api_url)
+responseDictionary = json.loads(response.text)
+responseString = json.dumps(responseDictionary)
+#print(response.json())
+responseDf = pd.read_json(responseString)
+print(responseDf)
+#print(responseDf.to_string())
+
+print(responseDf.head())
+
+print(responseDf.tail())
+
+print(responseDf.head(2))
+
+print(responseDf.tail(2))
+
+print(responseDf.columns)
+
+print(responseDf.latitude)
+print(responseDf.hourly)
+
+print('Times')
+print(responseDf.hourly.time)
+print('Temperatures')
+print(responseDf.hourly.temperature_2m)
+
+print('Time')
+print(responseDf.hourly.time[10])
+print('Temperature')
+print(responseDf.hourly.temperature_2m[10])
+
+print('Time')
+print(responseDf.hourly.time[13])
+print('Temperature')
+print(responseDf.hourly.temperature_2m[13])
+print(responseDf.hourly.temperature_2m[13] * 1.8000 + 32.00)
